@@ -5,7 +5,45 @@
 #export SVN_EDITOR=vi
 
 
-#应用维护命令
+##############################################
+#按照不同的项目，分别写出于项目标配alias
+#goxx进入目录
+#ecxx编辑配置
+#lgxx查看日志
+#stxx启动进程
+#sdxx关闭进程
+#cnxx连接进程
+#clxx清理文件
+#############################################
+#在setenv.sh中设置环境变量
+#XXHOME
+#############################################
+
+#定时任务
+alias lgcr='tail -f /var/log/cron'
+alias eccr='vi /etc/crontab'
+
+
+#pm2起停命令
+alias stpm='cd /root/workspace/zhaogong-be && pm2 start process.json'
+alias sdpm='pm2 stop all'
+alias lgpm='pm2 log'
+alias lepm='tail -f $HOME/.pm2/logs/zhaogong-error.log'
+
+#mongodb命令
+export LANG=en_US.UTF-8
+alias cnmg='echo "db.serverStatus().connections"  | mongo 100td:27117'
+alias clmg='echo "db.esf.remove({}); db.hrhis.remove({});"  | mongo 100td:27117'
+alias lgmg='tail -f /var/log/mongodb/mongod.log'
+alias stmg='service mongod start'
+alias sdmg='service mongod stop'
+alias ecmg='vi /etc/mongod.conf' 
+#安装mongod作为服务，设备重启后，可以自动启动进程
+alias istmgsvc='chkconfig mongod on'
+#卸载mongod作为服务
+alias istmgsvc='chkconfig mongod off'
+
+
 #腾讯小程序demo
 alias godemo='cd /data/release/node-weapp-demo/'
 
@@ -17,15 +55,3 @@ alias goc='cd /root/workspace/nodejs/cheerio'
 
 #shell utils
 alias gosu='cd /root/workspace/su'
-
-#pm2起停命令
-alias pstart='cd workspace/zhaogong-be && pm2 start process.json'
-alias pstop='pm2 stop all'
-alias plog='pm2 log'
-alias pelg='tail -f $HOME/.pm2/logs/zhaogong-error.log'
-alias lcron='tail -f /var/log/cron'
-
-#mongodb命令
-export LANG=en_US.UTF-8
-alias mgcon='echo "db.serverStatus().connections"  | mongo 100td:27117'
-alias mgclr='echo "db.esf.remove({}); db.hrhis.remove({});"  | mongo 100td:27117'
