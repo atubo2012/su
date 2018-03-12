@@ -52,6 +52,12 @@ alias gozg='cd /root/workspace/zhaogong-be'
 
 #lj&zy数据采集
 alias goc='cd /root/workspace/nodejs/cheerio'
+alias lgdc='tail -f /root/workspace/nodejs/cheerio/log/cron.log'
 
 #shell utils
 alias gosu='cd /root/workspace/su'
+
+
+
+#systemd相关
+alias gosd='cd /usr/lib/systemd/system'
