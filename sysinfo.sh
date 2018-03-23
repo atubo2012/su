@@ -29,8 +29,8 @@ echo "====node版本信息===="
 node --version
 
 echo "====服务信息===="
-systemctl list-units --type=service
+#systemctl list-units --type=service
 #systemctl list-units --type=target
 #systemctl list-units --type=socket
 
-
+ps -ef|grep node

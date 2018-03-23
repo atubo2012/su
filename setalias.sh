@@ -5,6 +5,7 @@
 #export SVN_EDITOR=vi
 
 
+
 ##############################################
 #按照不同的项目，分别写出于项目标配alias
 #goxx进入目录
@@ -14,6 +15,7 @@
 #sdxx关闭进程
 #cnxx连接进程
 #clxx清理文件
+#针对常用的命令，应该在secretcrt中设置为启动后自动执行，减少键盘输入量
 #############################################
 #在setenv.sh中设置环境变量
 #XXHOME
@@ -22,7 +24,6 @@
 #定时任务
 alias lgcr='tail -f /var/log/cron'
 alias eccr='vi /etc/crontab'
-
 
 #pm2起停命令
 alias stpm='cd /root/workspace/zhaogong-be && pm2 start process.json'
@@ -38,10 +39,13 @@ alias lgmg='tail -f /var/log/mongodb/mongod.log'
 alias stmg='service mongod start'
 alias sdmg='service mongod stop'
 alias ecmg='vi /etc/mongod.conf' 
+alias stmg='mongostat -h 100td:27117'
+#alias slmg='echo "db.system.profile.find({millis:{$gt:500}})" |mongo 100td:27117'
+
 #安装mongod作为服务，设备重启后，可以自动启动进程
 alias istmgsvc='chkconfig mongod on'
 #卸载mongod作为服务
-alias istmgsvc='chkconfig mongod off'
+alias uistmgsvc='chkconfig mongod off'
 
 
 #腾讯小程序demo
@@ -52,11 +56,15 @@ alias gozg='cd /root/workspace/zhaogong-be'
 
 #lj&zy数据采集
 alias goc='cd /root/workspace/nodejs/cheerio'
-alias lgdc='tail -f /root/workspace/nodejs/cheerio/log/cron.log'
+#alias lgdc='tail -f /root/workspace/nodejs/cheerio/log/cron.log'
+alias ldcq='tail -f /root/workspace/nodejs/cheerio/log/ljcq.log'
+alias ldsh='tail -f /root/workspace/nodejs/cheerio/log/ljsh.log'
+alias ldcd='tail -f /root/workspace/nodejs/cheerio/log/ljcd.log'
+alias ldsz='tail -f /root/workspace/nodejs/cheerio/log/ljsz.log'
+alias ldhz='tail -f /root/workspace/nodejs/cheerio/log/ljhz.log'
 
 #shell utils
 alias gosu='cd /root/workspace/su'
-
 
 
 #systemd相关
