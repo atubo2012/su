@@ -11,6 +11,8 @@ last -n 10
 echo "请确认是否有可疑IP"
 less /var/log/secure|grep 'Accepted'
 
+cat /var/log/secure | tail -n 1000 | grep 'Failed password'|awk '$11~/\./ { print $11} $9~/invalid/{print $13}' | sort |uniq|sed 's/$/,/g'|tr -d "\n" |sed 's/^/sshd : /g'|sed 's/,$/\n/g' 
+
 #修改后执行/etc/init.d/sshd restart，重新生效"
 echo "ssh开启端口，建议不使用默认端口23"
 cat /etc/ssh/sshd_config |grep Port
@@ -32,14 +34,3 @@ netstat  -antlp
 
 echo -e "\n是否有异常启动项"
 cat /etc/rc.local
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
