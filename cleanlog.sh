@@ -11,3 +11,8 @@ echo `date`>> $DC_HOME/log/clean.log
 
 #mongodb log
 echo "" > /var/log/mongodb/mongod.log
+echo "" > /var/log/messages
+
+#/var/log/secure
+echo "" > /var/log/secure
+

@@ -22,11 +22,24 @@ more /proc/meminfo | grep "MemFree"   |cut -f2 -d:
 echo "====磁盘空间信息===="
 df -h
 
-echo "====JAVA版本信息===="
+echo "====JAVA版本===="
 java -version
 
-echo "====node版本信息===="
+echo "====Python版本===="
+python --version
+
+echo "====node版本===="
 node --version
+
+echo "====npm版本===="
+npm -v
+
+echo "====openssl版本===="
+openssl version
+
+
+echo "====mongodb版本===="
+echo "db.version()" | mongo 100td:27117
 
 echo "====服务信息===="
 #systemctl list-units --type=service

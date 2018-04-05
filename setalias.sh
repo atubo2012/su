@@ -21,6 +21,11 @@
 #XXHOME
 #############################################
 
+#系统命令
+#找到大文件和大目录：https://www.cnblogs.com/iyoume2008/p/6105590.html
+alias bigsize='du -h --max-depth=1 |sort'
+alias bigsize2='find /  -type f -size +100M  -print0 | xargs -0 du -h | sort -nr '
+
 #定时任务
 alias lgcr='tail -f /var/log/cron'
 alias eccr='vi /etc/crontab'
@@ -36,6 +41,7 @@ export LANG=en_US.UTF-8
 alias cnmg='echo "db.serverStatus().connections"  | mongo 100td:27117'
 alias clmg='echo "db.esf.remove({}); db.hrhis.remove({});"  | mongo 100td:27117'
 alias lgmg='tail -f /var/log/mongodb/mongod.log'
+alias elmg='vi /var/log/mongodb/mongod.log'
 alias stmg='service mongod start'
 alias sdmg='service mongod stop'
 alias ecmg='vi /etc/mongod.conf' 
