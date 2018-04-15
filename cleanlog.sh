@@ -11,8 +11,9 @@ echo `date`>> $DC_HOME/log/clean.log
 
 #mongodb log
 echo "" > /var/log/mongodb/mongod.log
-echo "" > /var/log/messages
 
-#/var/log/secure
+#登录日志
 echo "" > /var/log/secure
+echo "" > /var/log/messages
+echo "" > /var/log/btmp
 
