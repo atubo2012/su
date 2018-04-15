@@ -25,7 +25,9 @@
 #找到大文件和大目录：https://www.cnblogs.com/iyoume2008/p/6105590.html
 alias bigsize='du -h --max-depth=1 |sort'
 alias bigsize2='find /  -type f -size +100M  -print0 | xargs -0 du -h | sort -nr '
-
+#安全管理
+alias elsc='vi /var/log/secure'
+alias elms='vi /var/log/messages'
 #定时任务
 alias lgcr='tail -f /var/log/cron'
 alias eccr='vi /etc/crontab'
@@ -71,6 +73,10 @@ alias ldhz='tail -f /root/workspace/nodejs/cheerio/log/ljhz.log'
 
 #shell utils
 alias gosu='cd /root/workspace/su'
+
+#wbot
+alias gowc='cd /root/workspace/nodejs/wechaty'
+
 
 
 #systemd相关
