@@ -22,6 +22,8 @@ echo "IP黑名单"
 cat /etc/hosts.deny
 echo "IP白名单"
 cat /etc/hosts.allow
+echo "异常登录情况"
+lastb | awk '{ print $3}' | sort | uniq -c | sort -n 
 
 #如有非授权账户或可以账户，可以使用命令usermod -L 用户名禁用用户或者使用命令userdel -r 用户名删除用户
 echo "请确认是否有非授权账户"
