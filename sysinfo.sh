@@ -8,6 +8,7 @@ cat /etc/hosts
 echo "====操作系统信息===="
 #lsb_release -a
 cat /proc/version
+cat /etc/redhat-release
 echo "====内核配置信息===="
 uname -r
 echo "====系统字长信息===="
@@ -39,7 +40,7 @@ openssl version
 
 
 echo "====mongodb版本===="
-echo "db.version()" | mongo 100td:27117
+cnmg
 
 echo "====服务信息===="
 #systemctl list-units --type=service
