@@ -41,15 +41,15 @@ alias lepm='tail -f $HOME/.pm2/logs/zhaogong-error.log'
 
 #mongodb命令
 export LANG=en_US.UTF-8
-alias cnmg='echo "db.serverStatus().connections"  | mongo 100td:27117'
-alias clmg='echo "db.esf.remove({}); db.hrhis.remove({});"  | mongo 100td:27117'
+alias cnmg='echo "db.serverStatus().connections"  | mongo $SI_DC_DBURL'
+alias clmg='echo "db.esf.remove({}); db.hrhis.remove({});"  | mongo $SI_DC_DBURL'
 alias lgmg='tail -f /var/log/mongodb/mongod.log'
 alias elmg='vi /var/log/mongodb/mongod.log'
 alias stmg='service mongod start'
 alias sdmg='service mongod stop'
 alias ecmg='vi /etc/mongod.conf' 
-alias stmg='mongostat -h 100td:27117'
-#alias slmg='echo "db.system.profile.find({millis:{$gt:500}})" |mongo 100td:27117'
+alias stmg='mongostat -h $SI_DC_DBURL'
+#alias slmg='echo "db.system.profile.find({millis:{$gt:500}})" |mongo $SI_DC_DBURL'
 
 #安装mongod作为服务，设备重启后，可以自动启动进程
 alias istmgsvc='chkconfig mongod on'
