@@ -38,9 +38,11 @@ npm -v
 echo "====openssl版本===="
 openssl version
 
-
 echo "====mongodb版本===="
 cnmg
+
+echo "====docker状态===="
+docker container ls -all
 
 echo "====服务信息===="
 #systemctl list-units --type=service
