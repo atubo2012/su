@@ -8,6 +8,7 @@ export PATH=$NODE_HOME/bin:$PATH
 
 export DC_HOME=$HOME/workspace/nodejs/cheerio
 export ZH_HOME=$HOME/workspace/zhaogong-be
+export SYSMONITOR_HOME=/var/log/sysmonitor
 
 export LANG=en_US.UTF-8
 export IP=`/sbin/ifconfig eth0 2>/dev/null | awk '/inet/ {print $2}' | sed 's/addr://'`
