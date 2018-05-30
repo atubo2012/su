@@ -29,6 +29,15 @@ alias dkswlv='docker swarm leave --force'
 #node管理命令
 alias dkndls='docker node ls'
 
+
+#compose常用命令
+alias dkcpup='docker-compose up $1'
+alias dkcpdw='docker-compose down'
+alias dkcpps='docker-compose ps'
+alias dkcprn='docker-compose run $1'
+alias dkcpsd='docker-compose stop'
+
+
 #备用命令
 #以后台模式执行容器中的一个命令
 alias dked='docker container exec -d $1 $2'
@@ -36,3 +45,8 @@ alias dked='docker container exec -d $1 $2'
 alias dkat='docker container attach $1'
 #查看容器中所有执行的命令和输出
 alias dklg='docker container logs $1'
+
+
+#wechaty启动命令
+alias wechatygo='cd /root/workspace/nodejs && nohup docker run -i --rm --volume="$(pwd)":/bot -v /etc/localtime:/etc/localtime:ro zixia/wechaty:0.14 wc.js  > wc.log &'
+alias wechatygos='cd /root/workspace/nodejs nohup docker run -e WECHATY_LOG=silly -i --rm --volume="$(pwd)":/bot -v /etc/localtime:/etc/localtime:ro zixia/wechaty:0.14 wc.js  > wc.log &'
