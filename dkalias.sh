@@ -12,7 +12,8 @@ alias dkls='docker container list -a'
 alias dkex='docker container exec -it $1 $2'
 alias dkst='docker container stats $1'
 alias dkps='docker ps -as &'
-alias dksd='docker container stop $1'
+alias dksd='docker container stop $1 '
+alias dksr='docker container rm $1 -f '
 alias dkkl='docker container kill $1'
 alias dkrc='docker container rm $1'
 
@@ -49,4 +50,6 @@ alias dklg='docker container logs $1'
 
 #wechaty启动命令
 alias wechatygo='cd /root/workspace/nodejs && nohup docker run -i --rm --volume="$(pwd)":/bot -v /etc/localtime:/etc/localtime:ro zixia/wechaty:0.14 wc.js  > wc.log &'
-alias wechatygos='cd /root/workspace/nodejs nohup docker run -e WECHATY_LOG=silly -i --rm --volume="$(pwd)":/bot -v /etc/localtime:/etc/localtime:ro zixia/wechaty:0.14 wc.js  > wc.log &'
+alias wechatygos='cd /root/workspace/nodejs && nohup docker run -e WECHATY_LOG=silly -i --rm --volume="$(pwd)":/bot -v /etc/localtime:/etc/localtime:ro zixia/wechaty:0.14 wc.js  > wc.log &'
+
+alias getwcdk=dkls |grep zixia |awk '{print $1}' > wcpid

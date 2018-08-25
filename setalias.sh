@@ -79,7 +79,7 @@ alias gosu='cd /root/workspace/su'
 alias gowc='cd /root/workspace/nodejs/wechaty'
 
 #docker study
-alias godk='cd /root/workspace/dockee'
+alias godk='cd /root/workspace/dockee/dockstart'
 
 #systemd相关
 alias gosd='cd /usr/lib/systemd/system'
