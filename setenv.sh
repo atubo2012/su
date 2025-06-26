@@ -1,6 +1,4 @@
-export NODE_HOME=$HOME/download/node-v6.11.0-linux-x64
-export PATH=$NODE_HOME/bin:$PATH
-
+export PATH=~/workspace/su:$PATH
 
 export SYSMONITOR_HOME=/var/log/sysmonitor
 
