@@ -1,13 +1,13 @@
 
-#快速提交github
-echo "正在添加文件..."
+#push cod to remote repo
+echo "adding file..."
 git add .
-echo -n "正在提交备注...，请填写备注（可空）:"
+echo -n "ok!, please input comments:"
 read remarks
 if [ ! -n "$remarks" ];then
     remarks="常规提交"
 fi
 git commit -m "$remarks"
-echo "正在开始提交代码..."
+echo "pushing code to remote repo..."
 git push origin master
-echo "代码提交成功，正在关闭..."
+echo "ok!"

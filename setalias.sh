@@ -3,7 +3,6 @@
 #alias l='ls -arlt '
 #export PS1='[`date +%H:%M:%S`|\u@\H|`pwd` ]\$'
 #export SVN_EDITOR=vi
-#hostname www.qstarnet.com  #<-该域名应为互联网域名，便于识别
 
 
 
